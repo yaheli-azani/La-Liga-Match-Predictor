@@ -158,7 +158,7 @@ for code, start_date, end_date in SEASONS:
 # -----------------------------------------------------------------------------
 # 4) FEATURE ENGINEERING: ROLLING FORM & GOAL AVERAGES
 # -----------------------------------------------------------------------------
-# We'll compute, for each match, for both home and away team:
+# Willll compute, for each match, for both home and away team:
 # - avg goals scored in last N games
 # - avg goals conceded in last N games
 # - win rate in last N games
@@ -319,7 +319,7 @@ features["target"] = features["FTR"].map({"H":0, "D":1, "A":2})
 # -----------------------------------------------------------------------------
 # 5) MODEL TRAINING & ROLLING SEASON-BY-SEASON EVALUATION
 # -----------------------------------------------------------------------------
-# We will train a fresh model for each split:
+# Will train a fresh model for each split:
 #   • Train on seasons 1…n
 #   • Test on season n+1
 # This simulates predicting a coming season using only data available before it.
@@ -363,7 +363,7 @@ for i in range(1, len(SEASONS)):
     X_train, y_train = X.loc[train_mask], y.loc[train_mask]
     X_test,  y_test  = X.loc[test_mask],  y.loc[test_mask]
 
-    # Initialize and train a fresh Random Forest using ONLY pre-match features
+    # Initialize and train a model using ONLY pre-match features
     clf = XGBClassifier(
         n_estimators=500,
         max_depth=8,
