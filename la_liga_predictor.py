@@ -1,7 +1,7 @@
 """
 LaLiga Predictor
 ----------------
-Downloads match data for the last 7 seasons, computes team standings and rolling form,
+Downloads match data for the last 19 seasons, computes team standings and rolling form,
 trains a Machine Learning model, and provides a function to predict future fixtures.
 """
 
