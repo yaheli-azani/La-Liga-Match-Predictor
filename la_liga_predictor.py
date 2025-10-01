@@ -158,7 +158,7 @@ for code, start_date, end_date in SEASONS:
 # -----------------------------------------------------------------------------
 # 4) FEATURE ENGINEERING: ROLLING FORM & GOAL AVERAGES
 # -----------------------------------------------------------------------------
-# Willll compute, for each match, for both home and away team:
+# Will compute, for each match, for both home and away team:
 # - avg goals scored in last N games
 # - avg goals conceded in last N games
 # - win rate in last N games
